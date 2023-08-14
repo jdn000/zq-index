@@ -1,15 +1,19 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const electronButton = document.querySelectorAll('.electron-button');
+    const electronButtons = document.querySelectorAll('.electron-button');
     const webButtons = document.querySelectorAll('.web-button');
 
     // Verificar si estás en un entorno de Electron y mostrar/ocultar botones
     if (isElectron()) {
-        electronButton.style.display = 'block';
+        electronButtons.forEach(button => {
+            button.style.display = 'block';
+        });
         webButtons.forEach(button => {
             button.style.display = 'none';
         });
     } else {
-        electronButton.style.display = 'none';
+        electronButtons.forEach(button => {
+            button.style.display = 'none';
+        });
         webButtons.forEach(button => {
             button.style.display = 'block';
         });
