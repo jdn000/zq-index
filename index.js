@@ -25,6 +25,12 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('printPdf').onclick = function () {
         printPdf();
     };
+    document.getElementById('webButton1').onclick = function () {
+        goToMain();
+    };
+    document.getElementById('webButton2').onclick = function () {
+        printPdf();
+    };
 });
 
 // Función para verificar si estás en un entorno de Electron
