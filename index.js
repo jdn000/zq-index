@@ -1,24 +1,45 @@
-document.getElementById('goToMain').onclick = function () {
-    goToMain()
-};
-document.getElementById('printPdf').onclick = function () {
-    printPdf()
-};
+document.addEventListener('DOMContentLoaded', function() {
+    const electronButton = document.getElementById('electronButton');
+    const webButtons = document.querySelectorAll('.web-button');
+
+    // Verificar si estás en un entorno de Electron y mostrar/ocultar botones
+    if (isElectron()) {
+        electronButton.style.display = 'block';
+        webButtons.forEach(button => {
+            button.style.display = 'none';
+        });
+    } else {
+        electronButton.style.display = 'none';
+        webButtons.forEach(button => {
+            button.style.display = 'block';
+        });
+    }
+
+    document.getElementById('goToMain').onclick = function () {
+        goToMain();
+    };
+    document.getElementById('printPdf').onclick = function () {
+        printPdf();
+    };
+});
+
+// Función para verificar si estás en un entorno de Electron
+function isElectron() {
+    return navigator.userAgent === 'electron-webview' || navigator.userAgent.includes('Electron');
+}
 
 function goToMain() {
-    if (navigator.userAgent === 'electron-webview' || navigator.userAgent.includes('Electron')) {
-
-        window.api.send("goToMainScreen");
+    if (isElectron()) {
+        window.api.send('goToMainScreen');
     } else {
-        console.log('Not on right environment')
+        console.log('Not on the right environment');
     }
 }
 
 function printPdf() {
-    if (navigator.userAgent === 'electron-webview' || navigator.userAgent.includes('Electron')) {
-
-        window.api.send("printPdf","sample.pdf");
+    if (isElectron()) {
+        window.api.send('printPdf', 'sample.pdf');
     } else {
-        console.log('Not on right environment')
+        console.log('Not on the right environment');
     }
 }
