@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', function() {
-    const electronButton = document.getElementById('electronButton');
+    const electronButton = document.querySelectorAll('.electron-button');
     const webButtons = document.querySelectorAll('.web-button');
 
     // Verificar si estás en un entorno de Electron y mostrar/ocultar botones
