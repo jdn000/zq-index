@@ -47,10 +47,23 @@ function goToMain() {
     }
 }
 
+function downloadFile(url, filename) {
+    const anchor = document.createElement('a');
+    anchor.href = url;
+    anchor.download = filename;
+    anchor.style.display = 'none';
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
+}
+
 function printPdf() {
     if (isElectron()) {
         window.api.send('printPdf', 'sample.pdf');
     } else {
         console.log('Not on the right environment');
+        const githubPagesUrl = 'https://github.com/jdn000/zq-index/blob/main/sample.pdf'; // Cambia esto a la URL de tu PDF en GitHub Pages
+        const filename = 'sample.pdf';
+        downloadFile(githubPagesUrl, filename);
     }
 }
