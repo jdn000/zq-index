@@ -62,7 +62,7 @@ function printPdf() {
         window.api.send('printPdf', 'sample.pdf');
     } else {
         console.log('Not on the right environment');
-        const githubPagesUrl = 'https://github.com/jdn000/zq-index/blob/main/sample.pdf'; // Cambia esto a la URL de tu PDF en GitHub Pages
+        const githubPagesUrl = 'https://github.com/jdn000/zq-index/raw/main/sample.pdf'; // Cambia esto a la URL de tu PDF en GitHub Pages
         const filename = 'sample.pdf';
         downloadFile(githubPagesUrl, filename);
     }
