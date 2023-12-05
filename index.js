@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     document.getElementById('goToMain').onclick = function () {
-        goToMain();
+      console.log("HELLO")
     };
     document.getElementById('printPdf').onclick = function () {
         printPdf();
@@ -83,6 +83,7 @@ function downloadFile(url, filename) {
 function printThermalCustom() {
     if (isElectron()) {
         window.api.send('printCustomThermal', {type:'thermal',data:'https://github.com/jdn000/zq-index/raw/main/sample.pdf'});
+        console.log("printThermalCustom")
     } else {
         console.log('Not on the right environment');
     
@@ -90,6 +91,8 @@ function printThermalCustom() {
 }
 function printThermalTicket() {
     if (isElectron()) {
+        console.log("printThermalTicket")
+
         window.api.send('printTicket', {type:'thermal',data:'https://github.com/jdn000/zq-index/raw/main/sample.pdf'});
     } else {
         console.log('Not on the right environment');
@@ -97,7 +100,10 @@ function printThermalTicket() {
     }
 }
 function printLaserCustom() {
+    
     if (isElectron()) {
+        console.log("printLaserCustom")
+
         window.api.send('printCustomLaser', {type:'laser',data:'https://github.com/jdn000/zq-index/raw/main/sample.pdf'});
     } else {
         console.log('Not on the right environment');
@@ -106,6 +112,8 @@ function printLaserCustom() {
 }
 function printLaserPdf() {
     if (isElectron()) {
+        console.log("printLaserPdf")
+
         window.api.send('printPdf', {type:'laser',data:'https://github.com/jdn000/zq-index/raw/main/sample.pdf'});
     } else {
         console.log('Not on the right environment');
