@@ -19,9 +19,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    document.getElementById('goToMain').onclick = function () {
-      console.log("HELLO")
-    };
+
     document.getElementById('printPdf').onclick = function () {
         printPdf();
     };
