@@ -25,11 +25,24 @@ document.addEventListener('DOMContentLoaded', function() {
     document.getElementById('printPdf').onclick = function () {
         printPdf();
     };
+    
     document.getElementById('webButton1').onclick = function () {
         goToMain();
     };
     document.getElementById('webButton2').onclick = function () {
         alert('La aplicacion no se esta ejecutando en un contexto adecuado');
+        printPdf();
+    };
+    document.getElementById('printThermalCustom').onclick = function () {
+        printPdf();
+    };
+    document.getElementById('printThermalTicket').onclick = function () {
+        printPdf();
+    };
+    document.getElementById('printLaserCustom').onclick = function () {
+        printPdf();
+    };
+    document.getElementById('printLaserPdf').onclick = function () {
         printPdf();
     };
 });
@@ -57,13 +70,45 @@ function downloadFile(url, filename) {
     document.body.removeChild(anchor);
 }
 
-function printPdf() {
+// function printPdf() {
+//     if (isElectron()) {
+//         window.api.send('printPdf', {type:'printPdf','https://github.com/jdn000/zq-index/raw/main/sample.pdf'});
+//     } else {
+//         console.log('Not on the right environment');
+//         const githubPagesUrl = 'https://www.africau.edu/images/default/sample.pdf'; // Cambia esto a la URL de tu PDF en GitHub Pages
+//         const filename = 'sample.pdf';
+//         downloadFile(githubPagesUrl, filename);
+//     }
+// }
+function printThermalCustom() {
     if (isElectron()) {
-        window.api.send('printPdf', 'sample.pdf');
+        window.api.send('printCustomThermal', {type:'thermal',data:'https://github.com/jdn000/zq-index/raw/main/sample.pdf'});
     } else {
         console.log('Not on the right environment');
-        const githubPagesUrl = 'https://github.com/jdn000/zq-index/raw/main/sample.pdf'; // Cambia esto a la URL de tu PDF en GitHub Pages
-        const filename = 'sample.pdf';
-        downloadFile(githubPagesUrl, filename);
+    
+    }
+}
+function printThermalTicket() {
+    if (isElectron()) {
+        window.api.send('printTicket', {type:'thermal',data:'https://github.com/jdn000/zq-index/raw/main/sample.pdf'});
+    } else {
+        console.log('Not on the right environment');
+    
+    }
+}
+function printLaserCustom() {
+    if (isElectron()) {
+        window.api.send('printCustomLaser', {type:'laser',data:'https://github.com/jdn000/zq-index/raw/main/sample.pdf'});
+    } else {
+        console.log('Not on the right environment');
+    
+    }
+}
+function printLaserPdf() {
+    if (isElectron()) {
+        window.api.send('printPdf', {type:'laser',data:'https://github.com/jdn000/zq-index/raw/main/sample.pdf'});
+    } else {
+        console.log('Not on the right environment');
+    
     }
 }
