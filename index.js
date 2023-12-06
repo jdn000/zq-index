@@ -3,21 +3,21 @@ document.addEventListener("DOMContentLoaded", function() {
     const webButtons = document.querySelectorAll(".web-button");
 
     // Verificar si estás en un entorno de Electron y mostrar/ocultar botones
-    if (isElectron()) {
+   // if (isElectron()) {
         electronButtons.forEach(button => {
             button.style.display = "block";
         });
         webButtons.forEach(button => {
             button.style.display = "none";
         });
-    } else {
-        electronButtons.forEach(button => {
-            button.style.display = "none";
-        });
-        webButtons.forEach(button => {
-            button.style.display = "block";
-        });
-    }
+    // } else {
+    //     electronButtons.forEach(button => {
+    //         button.style.display = "none";
+    //     });
+    //     webButtons.forEach(button => {
+    //         button.style.display = "block";
+    //     });
+    // }
 
 
     document.getElementById("printPdf").onclick = function () {
@@ -47,7 +47,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Función para verificar si estás en un entorno de Electron
 function isElectron() {
-    return navigator.userAgent === "electron-webview" || navigator.userAgent.includes("Electron");
+    return true
+   // return navigator.userAgent === "electron-webview" || navigator.userAgent.includes("Electron");
 }
 
 function goToMain() {
