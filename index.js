@@ -27,10 +27,10 @@ document.addEventListener("DOMContentLoaded", function() {
     };
     document.getElementById("webButton2").onclick = function () {
         alert("La aplicacion no se esta ejecutando en un contexto adecuado");
-        printPdf();
+       
     };
     document.getElementById("printThermalCustom").onclick = function () {
-        printPdf();
+        printThermalCustom();
     };
     // document.getElementById("printThermalTicket").onclick = function () {
     //     printPdf();
@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function() {
     //     printPdf();
     // };
     document.getElementById("printLaserPdf").onclick = function () {
-        printPdf();
+        printLaserPdf();
     };
 });
 
