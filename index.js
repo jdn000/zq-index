@@ -20,9 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
      }
 
 
-    document.getElementById("printPdf").onclick = function () {
-        printPdf();
-    };
+
     
     document.getElementById("webButton1").onclick = function () {
         goToMain();
