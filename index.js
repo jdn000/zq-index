@@ -32,12 +32,12 @@ document.addEventListener("DOMContentLoaded", function() {
     document.getElementById("printThermalCustom").onclick = function () {
         printPdf();
     };
-    document.getElementById("printThermalTicket").onclick = function () {
-        printPdf();
-    };
-    document.getElementById("printLaserCustom").onclick = function () {
-        printPdf();
-    };
+    // document.getElementById("printThermalTicket").onclick = function () {
+    //     printPdf();
+    // };
+    // document.getElementById("printLaserCustom").onclick = function () {
+    //     printPdf();
+    // };
     document.getElementById("printLaserPdf").onclick = function () {
         printPdf();
     };
@@ -85,32 +85,32 @@ function printThermalCustom() {
     
     }
 }
-function printThermalTicket() {
-    if (isElectron()) {
-        console.log("printThermalTicket")
+// function printThermalTicket() {
+//     if (isElectron()) {
+//         console.log("printThermalTicket")
 
-        window.api.send("printTicket", {type:"thermal",data:"https://github.com/jdn000/zq-index/raw/main/sample.pdf"});
-    } else {
-        console.log("Not on the right environment");
+//         window.api.send("printTicket", {type:"thermal",data:"https://github.com/jdn000/zq-index/raw/main/sample.pdf"});
+//     } else {
+//         console.log("Not on the right environment");
     
-    }
-}
-function printLaserCustom() {
+//     }
+// }
+// function printLaserCustom() {
     
-    if (isElectron()) {
-        console.log("printLaserCustom")
+//     if (isElectron()) {
+//         console.log("printLaserCustom")
 
-        window.api.send("printCustomLaser", {type:"laser",data:"https://github.com/jdn000/zq-index/raw/main/sample.pdf"});
-    } else {
-        console.log("Not on the right environment");
+//         window.api.send("printCustomLaser", {type:"laser",data:"https://github.com/jdn000/zq-index/raw/main/sample.pdf"});
+//     } else {
+//         console.log("Not on the right environment");
     
-    }
-}
+//     }
+// }
 function printLaserPdf() {
     if (isElectron()) {
         console.log("printLaserPdf")
 
-        window.api.send("printPdf", {type:"laser",data:"https://github.com/jdn000/zq-index/raw/main/sample.pdf"});
+        window.api.send("printPdf", {url:"https://github.com/jdn000/zq-index/raw/main/sample.pdf"});
     } else {
         console.log("Not on the right environment");
     
