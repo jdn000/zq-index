@@ -47,8 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 // Función para verificar si estás en un entorno de Electron
 function isElectron() {
-    return true
-   // return navigator.userAgent === "electron-webview" || navigator.userAgent.includes("Electron");
+ return navigator.userAgent === "electron-webview" || navigator.userAgent.includes("Electron");
 }
 
 function goToMain() {
