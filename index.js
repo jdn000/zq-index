@@ -18,20 +18,15 @@ document.addEventListener("DOMContentLoaded", function() {
             button.style.display = "block";
         });
      }
-
-
-
-    
-    // document.getElementById("webButton1").onclick = function () {
-    //     goToMain();
-    // };
     document.getElementById("webButton2").onclick = function () {
         alert("La aplicacion no se esta ejecutando en un contexto adecuado");
        
     };
     document.getElementById("printThermalCustom").onclick = function () {
         printThermalCustom();
-    };
+    };// document.getElementById("webButton1").onclick = function () {
+    //     goToMain();
+    // };
     // document.getElementById("printThermalTicket").onclick = function () {
     //     printPdf();
     // };
