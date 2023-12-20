@@ -22,9 +22,10 @@ document.addEventListener("DOMContentLoaded", function() {
         alert("La aplicacion no se esta ejecutando en un contexto adecuado");
        
     };
-    document.getElementById("printThermalCustom").onclick = function () {
-        printThermalCustom();
-    };// document.getElementById("webButton1").onclick = function () {
+    // document.getElementById("printThermalCustom").onclick = function () {
+    //     printThermalCustom();
+    // };
+    // document.getElementById("webButton1").onclick = function () {
     //     goToMain();
     // };
     // document.getElementById("printThermalTicket").onclick = function () {
@@ -102,9 +103,9 @@ function printThermalCustom() {
 //     }
 // }
 function printLaserPdf() {
+
     if (isElectron()) {
         console.log("printLaserPdf")
-
         window.api.send("printPdf", {url:"https://github.com/jdn000/zq-index/raw/main/sample.pdf"});
     } else {
         console.log("Not on the right environment");
