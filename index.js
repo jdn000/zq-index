@@ -22,9 +22,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     
-    document.getElementById("webButton1").onclick = function () {
-        goToMain();
-    };
+    // document.getElementById("webButton1").onclick = function () {
+    //     goToMain();
+    // };
     document.getElementById("webButton2").onclick = function () {
         alert("La aplicacion no se esta ejecutando en un contexto adecuado");
        
