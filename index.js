@@ -112,6 +112,6 @@ function printLaserPdf() {
     
     }
 }
-setInterval(() => {
-    document.getElementById('reloj').innerText = new Date().toLocaleTimeString();
-}, 1000);
+// setInterval(() => {
+//     document.getElementById('reloj').innerText = new Date().toLocaleTimeString();
+// }, 1000);
