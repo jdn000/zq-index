@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // document.getElementById("printThermalTicket").onclick = function () {
     //     printPdf();
     // };
-    // document.getElementById("printLaserCustom").onclick = function () {
+    // document.getElementById("ddprintLaserCustom").onclick = function () {
     //     printPdf();
     // };
     document.getElementById("printLaserPdf").onclick = function () {
