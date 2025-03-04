@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", async function () {
 	const electronButtons = document.querySelectorAll(".electron-button");
 	const webButtons = document.querySelectorAll(".web-button");
-	try {
-		const config = await window.zeroq.init({
-			apiKey: "tu-api-key",
-			officeId: 123, // Reemplaza con tu ID de oficina real
-		});
-		console.log("ZeroQ inicializado:", config);
-	} catch (error) {
-		console.error("Error al inicializar ZeroQ:", error);
-	}
+	// try {
+	// 	const config = await window.zeroq.init({
+	// 		apiKey: "tu-api-key",
+	// 		officeId: 123, // Reemplaza con tu ID de oficina real
+	// 	});
+	// 	console.log("ZeroQ inicializado:", config);
+	// } catch (error) {
+	// 	console.error("Error al inicializar ZeroQ:", error);
+	// }
 	// Verificar si estás en un entorno de Electron y mostrar/ocultar botones
 	if (isElectron()) {
 		electronButtons.forEach((button) => {
