@@ -1,6 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-<script src="https://cdn.jsdelivr.net/npm/service-kiosk@0.0.21/dist/service-kiosk.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/service-kiosk@0.0.23/dist/service-kiosk.umd.min.js"></script>
+<script>
+    // Asegúrate de que la librería esté cargada
+    console.log(ServiceKiosk); // Debe imprimir el objeto si está disponible
+
+    // Inicializar el kiosko si el objeto existe
+    if (ServiceKiosk) {
+        const kiosk = ServiceKiosk.init({
+            apiKey: "TU_API_KEY",
+            options: { debug: true } // Configuración opcional
+        });
+
+        console.log(kiosk); // Verifica si se inicializa correctamente
+    } else {
+        console.error("ServiceKiosk no está disponible");
+    }
+</script>
 
 <head>
     <meta charset="utf-8">
