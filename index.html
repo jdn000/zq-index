@@ -6,17 +6,17 @@
     console.log(ServiceKiosk); // Debe imprimir el objeto si está disponible
 
     // Inicializar el kiosko si el objeto existe
-    if (ServiceKiosk) {
-        const kiosk = ServiceKiosk.init({
-            apiKey: "9c2cfbe6-b405-4055-8e51-0d646be7351c",
-            officeId: 2494,
-            options: { debug: true } // Configuración opcional
-        });
+    //   if (ServiceKiosk) {
+    const kiosk = ServiceKiosk.init({
+        apiKey: "9c2cfbe6-b405-4055-8e51-0d646be7351c",
+        officeId: 2494,
+        options: { debug: true } // Configuración opcional
+    });
 
-        console.log(kiosk); // Verifica si se inicializa correctamente
-    } else {
-        console.error("ServiceKiosk no está disponible");
-    }
+    console.log(kiosk); // Verifica si se inicializa correctamente
+    //  } else {
+    //   console.error("ServiceKiosk no está disponible");
+    //  }
 </script>
 
 <head>
